@@ -6,7 +6,7 @@ import java.util.*;
  * Date: 9/4/12
  * Time: 8:36 PM
  */
-public class FuzzyDeduper implements Deduper{
+public class FuzzyDeduperJ implements Deduper{
 
     private Set<String> candidates; //Assume input was already deduped. This allows us to use the input values as unique keys for a Set.
     private HashMap<String, Set<String>> phonemeMap = new HashMap<String, Set<String>>();
@@ -42,7 +42,7 @@ public class FuzzyDeduper implements Deduper{
      * Compile list of candidates
      * @param candidateList
      */
-    public FuzzyDeduper(Set<String> candidateList, int granularity){
+    public FuzzyDeduperJ(Set<String> candidateList, int granularity){
         if(candidateList == null || candidateList.size()<1) throw new IllegalArgumentException();
         this.candidates = candidateList;
         this.granularity = granularity;

@@ -1,4 +1,5 @@
-import java.util.HashSet;
+import com.ungersoft.fuzz.FuzzyDeduper;
+
 import java.util.Iterator;
 import java.util.Map;
 
@@ -20,7 +21,7 @@ public class Test {
 
         long startTime = System.currentTimeMillis();
 
-        FuzzyDeduper fd = new FuzzyDeduper((new CSVReader("input.csv")).getNames(), 5);
+        FuzzyDeduperJ fd = new FuzzyDeduperJ((new CSVReader("input.csv")).getNames(), 5);
         int i=0;
         Map<Pair<String,String>,Double> ranks =  fd.candidatesByRank();
 
