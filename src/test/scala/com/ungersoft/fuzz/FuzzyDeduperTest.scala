@@ -11,7 +11,7 @@ import org.specs2.mutable.Specification
 class FuzzyDeduperTest extends Specification {
   "Fuzzy Deduper" should {
     "exist" in {
-      new FuzzyDeduper(Seq("a"), 1)
+      new PhonemeMapper(Seq("a"), 1)
       1 must be equalTo(1)
     }
   }

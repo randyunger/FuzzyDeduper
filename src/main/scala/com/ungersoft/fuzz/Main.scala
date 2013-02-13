@@ -18,11 +18,16 @@ object Main {
     val startTime: Long = System.currentTimeMillis
 
     //Read newline separated lines from input file
-    val lines = scala.io.Source.fromFile("input.csv")("UTF-8").getLines().toSet
+    val lines = scala.io.Source.fromFile("subset.txt")("UTF-8").getLines().toSet
+//    val lines = scala.io.Source.fromFile("input.csv")("UTF-8").getLines().toSet
 
 
-    val fuzzyDeduper = new FuzzyDeduper(lines)
-    fuzzyDeduper.candidatesByRank.take(50).foreach(println)
+    val pm = new PhonemeMapper(lines, 5)
+
+//    phonemeMapper.phonemesToSentences foreach println
+
+
+//    fuzzyDeduper.candidatesByRank.take(50).foreach(println)
 
 //    var i: Int = 0
 ////    val ranks: Map[Pair[String, String], Double] = fd.candidatesByRank

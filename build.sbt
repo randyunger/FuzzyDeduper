@@ -1,8 +1,10 @@
 name := "Fuzzy Deduper"
 
-version := "1.2"
+version := "2.0.3"
 
 scalaVersion := "2.9.2"
+
+javaOptions += "-Xmx800M"
 
 libraryDependencies ++= Seq(
     "com.weiglewilczek.slf4s" % "slf4s_2.9.1" % "1.0.7",
