@@ -7,7 +7,7 @@ package com.ungersoft.fuzz
  * Time: 9:48 PM
  */
 
-case class MatchFinder(threshhold: Float = 0.01f)(implicit phonemeMapper: PhonemeMapper, scorer: MatchScorer) {
+case class MatchFinder(threshhold: Double = 0.00001)(implicit phonemeMapper: PhonemeMapper, scorer: MatchScorer) {
   val sampleSize = Integer.MAX_VALUE
 
   lazy val scores = phonemeMapper.processedSentences.

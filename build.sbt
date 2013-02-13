@@ -4,7 +4,9 @@ version := "2.0.3"
 
 scalaVersion := "2.9.2"
 
-javaOptions += "-Xmx800M"
+javaOptions ++= Seq("-Xmx3G", "-Xms900M")
+
+fork := true
 
 libraryDependencies ++= Seq(
     "com.weiglewilczek.slf4s" % "slf4s_2.9.1" % "1.0.7",
