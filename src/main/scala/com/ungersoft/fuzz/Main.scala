@@ -21,9 +21,13 @@ object Main {
     val lines = scala.io.Source.fromFile("subset.txt")("UTF-8").getLines().toSet
 //    val lines = scala.io.Source.fromFile("input.csv")("UTF-8").getLines().toSet
 
+    val scorer = MathyScorer()
 
     val pm = new PhonemeMapper(lines, 5)
 
+    val mf = new MatchFinder()(pm, scorer)
+
+    mf.rankedMatches.take(100) foreach println
 //    phonemeMapper.phonemesToSentences foreach println
 
 
